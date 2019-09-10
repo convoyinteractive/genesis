@@ -1,0 +1,68 @@
+// Global Colors
+$black:             #303030;
+$white:             #FFFFFF;
+$text-color:        $black;
+$body-color:        $white;
+
+$colors: (
+    'white': $white,
+    'black': $black,
+);
+
+// Grid configurations.
+$enable-grid-classes:   true;
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+);
+
+$container-max-widths:  (
+    sm: 1320px
+);
+
+$grid-columns:          12;
+$grid-gutter-width:     40px;
+
+// Display configurations.
+$displays: none, inline, inline-block, block, table, table-row, table-cell, flex, inline-flex;
+
+// Spacing configuration.
+$spacers: (
+    0: 0,
+    1: ($grid-gutter-width * 0.25),
+    2: ($grid-gutter-width * 0.50),
+    3: ($grid-gutter-width * 1.00),
+    4: ($grid-gutter-width * 1.50),
+    5: ($grid-gutter-width * 3.00),
+    6: ($grid-gutter-width * 5.00)
+);
+
+// Sizes configurations.
+$sizes: (
+    25: 25%,
+    50: 50%,
+    75: 75%,
+    100: 100%,
+    auto: auto
+);
+
+$font-size-0: 8.50rem;
+$font-size-1: 2.72rem;
+$font-size-2: 1.63rem;
+$font-size-3: 1.36rem;
+$font-size-4: 1.15rem;
+$font-size-5: 0.82rem;
+$font-size-6: 0.72rem;
+
+$font-sizes: (
+    0: $font-size-0,
+    1: $font-size-1,
+    2: $font-size-2,
+    3: $font-size-3,
+    4: $font-size-4,
+    5: $font-size-5
+);

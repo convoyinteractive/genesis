@@ -1,0 +1,10 @@
+@import './config/config';
+
+// Bootstrap grid
+@import '~bootstrap/scss/grid';
+
+// Bootstrap utilities
+@import '~bootstrap/scss/utilities/display',
+        '~bootstrap/scss/utilities/spacing',
+        '~bootstrap/scss/utilities/sizing',
+        '~bootstrap/scss/utilities/flex';
