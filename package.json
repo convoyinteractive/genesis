@@ -2,6 +2,7 @@
   "name": "boot",
   "version": "1.0.0",
   "description": "A basic template to rapidly build static websites.",
+  "private": true,
   "main": "main.js",
   "scripts": {
     "build": "webpack --mode production",
