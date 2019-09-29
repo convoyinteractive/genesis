@@ -1,0 +1,35 @@
+@each $class, $color in $colors {
+    .bg-#{$class} {
+        background-color: $color;
+    }
+
+    .text-#{$class} {
+        color: $color;
+    }
+
+    .text-hover-#{$class}:hover {
+        color: $color;
+    }
+}
+
+@each $breakpoint, $width in $grid-breakpoints {
+    @each $class, $color in $colors {
+        .bg-#{$breakpoint}-#{$class} {
+            @include media-breakpoint-up($breakpoint) {
+                background-color: $color;
+            }
+        }
+
+        .text-#{$breakpoint}-#{$class} {
+            @include media-breakpoint-up($breakpoint) {
+                color: $color;
+            }
+        }
+
+        .text-#{$breakpoint}-hover-#{$class}:hover {
+            @include media-breakpoint-up($breakpoint) {
+                color: $color;
+            }
+        }
+    }
+}
