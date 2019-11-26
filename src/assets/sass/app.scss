@@ -4,7 +4,8 @@
 @import '~bootstrap/scss/grid';
 
 // Bootstrap utilities
-@import '~bootstrap/scss/utilities/display',
+@import '~bootstrap/scss/utilities/position',
+		'~bootstrap/scss/utilities/display',
         '~bootstrap/scss/utilities/spacing',
         '~bootstrap/scss/utilities/sizing',
         '~bootstrap/scss/utilities/flex';
