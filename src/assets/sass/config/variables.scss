@@ -30,6 +30,9 @@ $grid-gutter-width:     40px;
 // Display configurations.
 $displays: none, inline, inline-block, block, table, table-row, table-cell, flex, inline-flex;
 
+// Overflow configurations
+$overflows: auto, hidden !default;
+
 // Position configurations
 $positions: static, relative, absolute, fixed, sticky;
 
