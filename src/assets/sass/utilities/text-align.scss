@@ -1,0 +1,20 @@
+$textAlignmentClasses: (
+    left,
+    right,
+    center,
+    justify
+);
+
+@each $align in $textAlignmentClasses {
+    .text-#{$align} {
+        text-align: $align;
+    }
+}
+
+@each $breakpoint, $width in $grid-breakpoints {
+    @each $align in $textAlignmentClasses {
+        .text-#{$breakpoint}-#{$align} {
+            text-align: $align;
+        }
+    }
+}
