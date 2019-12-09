@@ -1,0 +1,26 @@
+$marginClasses: (
+    'top': 'mt',
+    'left': 'ml',
+    'right': 'mr',
+    'bottom': 'mb'
+);
+
+@each $unit, $value in $spacers {
+    @each $direction, $class in $marginClasses {
+        .-#{$class}-#{$unit} {
+            margin-#{$direction}: $value * -1;
+        }
+    }
+}
+
+@each $breakpoint, $width in $grid-breakpoints {
+    @each $unit, $value in $spacers {
+        @each $direction, $class in $marginClasses {
+            .-#{$class}-#{$breakpoint}-#{$unit} {
+                @include media-breakpoint-up($breakpoint) {
+                    margin-#{direction}: $value * -1;
+                }
+            }
+        }
+    }
+}
