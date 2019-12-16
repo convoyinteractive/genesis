@@ -38,16 +38,17 @@ $overflows: auto, hidden !default;
 $positions: static, relative, absolute, fixed, sticky;
 
 // Spacing configuration.
-//
-// prettier-ignore
 $spacers: (
     0: 0,
-    1: ($grid-gutter-width * 0.25),
-    2: ($grid-gutter-width * 0.5),
-    3: ($grid-gutter-width * 1),
-    4: ($grid-gutter-width * 1.5),
-    5: ($grid-gutter-width * 3),
-    6: ($grid-gutter-width * 5),
+    2: 8px,
+    3: 12px,
+    4: 16px,
+    5: 20px,
+    6: 24px,
+    10: 40px,
+    12: 48px,
+    20: 80px,
+    25: 100px,
 );
 
 // Sizes configurations.
