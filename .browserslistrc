@@ -1,2 +1,4 @@
 # Browsers that we support
-ie >= 11
+> 1%
+Last 2 versions
+IE >= 11
