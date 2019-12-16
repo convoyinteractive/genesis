@@ -36,9 +36,43 @@ You may include partials within in your HTML views for a more convinient develop
 ${require('./partials/header.htm')}
 ```
 
+## Assets
+
+Currently supported file types:
+- .png
+- .jpg
+- .jpeg
+- .gif
+- .svg
+- .webm
+- .mov
+- .mp4
+- .eot
+- .ttf
+- .woff
+- .woff2
+
+### Loading assets from HTML or CSS
+
+Within your `HTML` or `CSS` files all images you reference relative to your current directory should be automatically loaded and versioned. 
+
+```html
+<img src="../assets/images/example.png" alt="Example Image">
+```
+
+You may require video files directly from your `HTML` via JavaScript Templates:
+
+```html
+<video src="${require('../assets/videos/video.mp4')}" controls muted />
+```
+
+### Loading assets from JavaScript
+
+Within JavaScript files you may load your assets with `const example = require('../assets/images/example.png')`.
+
 ## Building for production
 
-By building for production all files will be compiled down in a */dist* directory that you can upload to your production server. Your assets will be minified and versioned in a */dist/{js, css, images, fonts}* directory.
+By building for production all files will be compiled down in a */dist* directory that you can upload to your production server. Your assets will be minified and versioned in a */dist/{js, css, images, videos, fonts}* directory.
 
 ```bash
 npm run build
