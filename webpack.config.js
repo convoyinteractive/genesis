@@ -132,7 +132,7 @@ module.exports = {
                 ]
             },
             {
-                test: /\.htm$/, 
+                test: /\.htm$/,
                 use: [
                     {
                         loader: 'html-loader?interpolate'
