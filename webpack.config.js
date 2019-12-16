@@ -84,6 +84,17 @@ module.exports = {
                 ]
             },
             {
+                test: /\.(webm|mov|mp4)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: 'videos/[name].[hash:6].[ext]'
+                        }
+                    }
+                ]
+             },
+            {
                 test: /\.html$/,
                 exclude: /index\.html/,
                 use: [
