@@ -1,8 +1,8 @@
 $marginClasses: (
-    'top': 'mt',
-    'left': 'ml',
-    'right': 'mr',
-    'bottom': 'mb'
+    "top": "mt",
+    "left": "ml",
+    "right": "mr",
+    "bottom": "mb",
 );
 
 @each $unit, $value in $spacers {

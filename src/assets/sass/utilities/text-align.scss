@@ -1,9 +1,4 @@
-$textAlignmentClasses: (
-    left,
-    right,
-    center,
-    justify
-);
+$textAlignmentClasses: (left, right, center, justify);
 
 @each $align in $textAlignmentClasses {
     .text-#{$align} {

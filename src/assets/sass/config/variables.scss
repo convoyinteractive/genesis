@@ -1,34 +1,35 @@
 // Global Colors
-$black:             #303030;
-$white:             #FFFFFF;
-$text-color:        $black;
-$body-color:        $white;
+$black: #303030;
+$white: #ffffff;
+$text-color: $black;
+$body-color: $white;
 
 $colors: (
-    'white': $white,
-    'black': $black,
+    "white": $white,
+    "black": $black,
 );
 
 // Grid configurations.
-$enable-grid-classes:   true;
+$enable-grid-classes: true;
 
 $grid-breakpoints: (
     xs: 0,
     sm: 576px,
     md: 768px,
     lg: 992px,
-    xl: 1200px
+    xl: 1200px,
 );
 
-$container-max-widths:  (
-    sm: 1320px
+$container-max-widths: (
+    sm: 1320px,
 );
 
-$grid-columns:          12;
-$grid-gutter-width:     40px;
+$grid-columns: 12;
+$grid-gutter-width: 40px;
 
 // Display configurations.
-$displays: none, inline, inline-block, block, table, table-row, table-cell, flex, inline-flex;
+$displays: none, inline, inline-block, block, table, table-row, table-cell, flex,
+    inline-flex;
 
 // Overflow configurations
 $overflows: auto, hidden !default;
@@ -37,14 +38,16 @@ $overflows: auto, hidden !default;
 $positions: static, relative, absolute, fixed, sticky;
 
 // Spacing configuration.
+//
+// prettier-ignore
 $spacers: (
     0: 0,
     1: ($grid-gutter-width * 0.25),
-    2: ($grid-gutter-width * 0.50),
-    3: ($grid-gutter-width * 1.00),
-    4: ($grid-gutter-width * 1.50),
-    5: ($grid-gutter-width * 3.00),
-    6: ($grid-gutter-width * 5.00)
+    2: ($grid-gutter-width * 0.5),
+    3: ($grid-gutter-width * 1),
+    4: ($grid-gutter-width * 1.5),
+    5: ($grid-gutter-width * 3),
+    6: ($grid-gutter-width * 5),
 );
 
 // Sizes configurations.
@@ -53,19 +56,19 @@ $sizes: (
     50: 50%,
     75: 75%,
     100: 100%,
-    auto: auto
+    auto: auto,
 );
 
 // Z-index master list
-$zindex-dropdown:                   1000;
-$zindex-sticky:                     1020;
-$zindex-fixed:                      1030;
-$zindex-modal-backdrop:             1040;
-$zindex-modal:                      1050;
-$zindex-popover:                    1060;
-$zindex-tooltip:                    1070;
+$zindex-dropdown: 1000;
+$zindex-sticky: 1020;
+$zindex-fixed: 1030;
+$zindex-modal-backdrop: 1040;
+$zindex-modal: 1050;
+$zindex-popover: 1060;
+$zindex-tooltip: 1070;
 
-$font-size-0: 8.50rem;
+$font-size-0: 8.5rem;
 $font-size-1: 2.72rem;
 $font-size-2: 1.63rem;
 $font-size-3: 1.36rem;
@@ -79,5 +82,5 @@ $font-sizes: (
     2: $font-size-2,
     3: $font-size-3,
     4: $font-size-4,
-    5: $font-size-5
+    5: $font-size-5,
 );

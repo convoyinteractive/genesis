@@ -1,16 +1,21 @@
-@import './config/config';
+@import "./config/config";
 
 // Bootstrap grid
-@import '~bootstrap/scss/grid';
+@import "~bootstrap/scss/grid";
 
 // Bootstrap utilities
-@import '~bootstrap/scss/utilities/position',
-	    '~bootstrap/scss/utilities/overflow',
-	    '~bootstrap/scss/utilities/display',
-        '~bootstrap/scss/utilities/spacing',
-        '~bootstrap/scss/utilities/sizing',
-        '~bootstrap/scss/utilities/flex';
+//
+// prettier-ignore
+@import "~bootstrap/scss/utilities/position",
+        "~bootstrap/scss/utilities/overflow",
+        "~bootstrap/scss/utilities/display",
+        "~bootstrap/scss/utilities/spacing",
+        "~bootstrap/scss/utilities/sizing",
+        "~bootstrap/scss/utilities/flex";
 
-@import 'utilities/colors',
-	    'utilities/text-align',
-	    'utilities/negative-margin';
+// Additional utilities
+//
+// prettier-ignore
+@import "utilities/colors",
+        "utilities/text-align",
+        "utilities/negative-margin";
