@@ -8,7 +8,7 @@ $grid-paddings: (
 
 $stretch-columns: false !default;
 
-@if($stretch-colums) {
+@if ($stretch-colums) {
     @each $breakpoint, $padding in $grid-paddings {
         .page-padding {
             @include media-breakpoint-up($breakpoint) {
@@ -30,9 +30,7 @@ $stretch-columns: false !default;
         }
     }
 
-
     @for $columns from 1 through $grid-columns {
-
         $column-width: 100% / $grid-columns * $columns;
 
         @each $breakpoint, $padding in $grid-paddings {
