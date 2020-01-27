@@ -6,40 +6,42 @@ $grid-paddings: (
     xl: 100px,
 );
 
+$stretch-columns: false !default;
 
-@each $breakpoint, $padding in $grid-paddings {
-    .page-padding {
-        @include media-breakpoint-up($breakpoint) {
-            padding-left: $padding;
-            padding-right: $padding;
-        }
-    }
-
-    .stretch-#{$breakpoint}-left {
-        @include media-breakpoint-up($breakpoint) {
-            margin-left: -$padding;
-        }
-    }
-
-    .stretch-#{$breakpoint}-right {
-        @include media-breakpoint-up($breakpoint) {
-            margin-right: -$padding;
-        }
-    }
-}
-
-
-@for $columns from 1 through $grid-columns {
-
-    $column-width: 100% / $grid-columns * $columns;
-
+@if($stretch-colums) {
     @each $breakpoint, $padding in $grid-paddings {
-        .col-#{$breakpoint}-#{$column}[class*="stretch-#{$breakpoint}"] {
+        .page-padding {
             @include media-breakpoint-up($breakpoint) {
-                flex: 0 0 calc(#{$column-width} + #{$padding});
-                max-width: calc(#{$column-width} + #{$padding});
+                padding-left: $padding;
+                padding-right: $padding;
+            }
+        }
+
+        .stretch-#{$breakpoint}-left {
+            @include media-breakpoint-up($breakpoint) {
+                margin-left: -$padding;
+            }
+        }
+
+        .stretch-#{$breakpoint}-right {
+            @include media-breakpoint-up($breakpoint) {
+                margin-right: -$padding;
+            }
+        }
+    }
+
+
+    @for $columns from 1 through $grid-columns {
+
+        $column-width: 100% / $grid-columns * $columns;
+
+        @each $breakpoint, $padding in $grid-paddings {
+            .col-#{$breakpoint}-#{$columns}[class*="stretch-#{$breakpoint}"] {
+                @include media-breakpoint-up($breakpoint) {
+                    flex: 0 0 calc(#{$column-width} + #{$padding});
+                    max-width: calc(#{$column-width} + #{$padding});
+                }
             }
         }
     }
 }
-
