@@ -25,6 +25,7 @@ $container-max-widths: (
 );
 
 $grid-columns: 12;
+$grid-row-columns: $grid-columns;
 $grid-gutter-width: 40px;
 
 // Display configurations.
