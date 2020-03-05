@@ -26,7 +26,9 @@ By default your project will be running at http://localhost:3000 and webpack wil
 
 We natively support pretty URLs. So a *news.html* file within your views directory will be accessible as *http://example.com/news/*.
 
-To create nested pages simply divide your segments by a ":". For example *news:convoy-interactive-presents-boot.html* will generate *http://example.com/news/convoy-interactive-presents-boot/*.
+To create nested pages simply divide your segments by a ":".
+
+>Eg. `news:convoy-interactive-presents-boot.html` → `/news/convoy-interactive-presents-boot`
 
 ### Components
 
