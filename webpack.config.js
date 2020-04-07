@@ -3,6 +3,7 @@ const path = require('path');
 const fs = require('fs');
 const CopyPlugin = require('copy-webpack-plugin');
 const ExtractCssChunks = require('extract-css-chunks-webpack-plugin');
+const WebpackAssetsManifest = require("webpack-assets-manifest");
 
 let views = fs.readdirSync('./src/views/').filter(function(file) {
     return file.match(/.*\.html$/);
@@ -154,5 +155,9 @@ module.exports = {
         new CopyPlugin([
             { from: 'src/static' },
         ]),
+
+        new WebpackAssetsManifest({
+            output: "asset-manifest.json",
+        }),
     ]
 };
