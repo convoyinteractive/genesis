@@ -1,9 +1,8 @@
-const webpack = require('webpack');
-const path = require('path');
-const fs = require('fs');
-const CopyPlugin = require('copy-webpack-plugin');
-const ExtractCssChunks = require('extract-css-chunks-webpack-plugin');
-const WebpackAssetsManifest = require("webpack-assets-manifest");
+const webpack = require("webpack");
+const path = require("path");
+const fs = require("fs");
+const CopyPlugin = require("copy-webpack-plugin");
+const ExtractCssChunks = require("extract-css-chunks-webpack-plugin");
 
 let views = fs.readdirSync('./src/views/').filter(function(file) {
     return file.match(/.*\.html$/);
@@ -144,20 +143,12 @@ module.exports = {
     },
 
     plugins: [
-        new ExtractCssChunks(
-            {
-              filename: "css/app.css",
-              chunkFilename: "css/[id].css",
-              orderWarning: true,
-            }
-        ),
-
-        new CopyPlugin([
-            { from: 'src/static' },
-        ]),
-
-        new WebpackAssetsManifest({
-            output: "asset-manifest.json",
+        new ExtractCssChunks({
+            filename: "css/app.css",
+            chunkFilename: "css/[id].css",
+            orderWarning: true,
         }),
-    ]
+
+        new CopyPlugin([{ from: "src/static" }]),
+    ],
 };
