@@ -4,29 +4,28 @@ const fs = require("fs");
 const CopyPlugin = require("copy-webpack-plugin");
 const ExtractCssChunks = require("extract-css-chunks-webpack-plugin");
 
-let views = fs.readdirSync('./src/views/').filter(function(file) {
-    return file.match(/.*\.html$/);
-}).map(function(view) {
-    return './src/views/' + view;
-});
+let views = fs
+    .readdirSync("./src/views/")
+    .filter(function(file) {
+        return file.match(/.*\.html$/);
+    })
+    .map(function(view) {
+        return "./src/views/" + view;
+    });
 
 module.exports = {
-    entry: [
-        './src/main.js',
-        './src/assets/sass/app.scss',
-        ...views
-    ],
+    entry: ["./src/main.js", "./src/assets/sass/app.scss", ...views],
 
     output: {
-        path: path.resolve(__dirname, './dist'),
-        publicPath: '/',
-        filename: 'js/app.js'
+        path: path.resolve(__dirname, "./dist"),
+        publicPath: "/",
+        filename: "js/app.js",
     },
 
     devServer: {
-        contentBase: path.join(__dirname, './dist'),
+        contentBase: path.join(__dirname, "./dist"),
         port: 3000,
-        open: true
+        open: true,
     },
 
     module: {
@@ -34,110 +33,117 @@ module.exports = {
             {
                 test: /\.js$/,
                 use: {
-                    loader: 'babel-loader',
+                    loader: "babel-loader",
                     options: {
-                        presets: ['@babel/preset-env'],
-                    }
-                }
+                        presets: ["@babel/preset-env"],
+                    },
+                },
             },
             {
                 test: /.scss$/,
                 use: [
                     {
-                        loader:ExtractCssChunks.loader,
+                        loader: ExtractCssChunks.loader,
                         options: {
                             hot: true,
-                            reloadAll: true
-                        }
+                            reloadAll: true,
+                        },
                     },
                     {
-                        loader: 'css-loader'
+                        loader: "css-loader",
                     },
                     {
-                        loader: 'postcss-loader'
+                        loader: "postcss-loader",
                     },
                     {
-                        loader: 'sass-loader'
-                    }
-                ]
+                        loader: "sass-loader",
+                    },
+                ],
             },
             {
                 test: /\.(eot|ttf|woff|woff2)$/,
                 use: [
                     {
-                        loader: 'file-loader',
+                        loader: "file-loader",
                         options: {
-                            name: 'fonts/[name].[hash:6].[ext]'
-                        }
-                    }
-                ]
+                            name: "fonts/[name].[hash:6].[ext]",
+                        },
+                    },
+                ],
             },
             {
                 test: /\.(png|jpe?g|gif|svg)$/,
                 use: [
                     {
-                        loader: 'file-loader',
+                        loader: "file-loader",
                         options: {
-                            name: 'images/[name].[hash:6].[ext]'
-                        }
-                    }
-                ]
+                            name: "images/[name].[hash:6].[ext]",
+                        },
+                    },
+                ],
             },
             {
                 test: /\.(webm|mov|mp4)$/,
                 use: [
                     {
-                        loader: 'file-loader',
+                        loader: "file-loader",
                         options: {
-                            name: 'videos/[name].[hash:6].[ext]'
-                        }
-                    }
-                ]
-             },
+                            name: "videos/[name].[hash:6].[ext]",
+                        },
+                    },
+                ],
+            },
             {
                 test: /\.html$/,
                 exclude: /index\.html/,
                 use: [
                     {
-                        loader: 'file-loader',
+                        loader: "file-loader",
                         options: {
                             name(file) {
-                                return file.split('/').slice(-1).pop().replace(':', '/').replace('.html', '/') + 'index.html';
-                            }
-                        }
+                                return (
+                                    file
+                                        .split("/")
+                                        .slice(-1)
+                                        .pop()
+                                        .replace(":", "/")
+                                        .replace(".html", "/") + "index.html"
+                                );
+                            },
+                        },
                     },
                     {
-                        loader: 'extract-loader'
+                        loader: "extract-loader",
                     },
                     {
-                        loader: 'html-loader?interpolate'
-                    }
-                ]
+                        loader: "html-loader?interpolate",
+                    },
+                ],
             },
             {
                 test: /index\.html$/,
                 use: [
                     {
-                        loader: 'file-loader',
+                        loader: "file-loader",
                         options: {
-                            name: 'index.html',
-                        }
+                            name: "index.html",
+                        },
                     },
                     {
-                        loader: 'extract-loader'
+                        loader: "extract-loader",
                     },
                     {
-                        loader: 'html-loader?interpolate'
-                    }
-                ]
+                        loader: "html-loader?interpolate",
+                    },
+                ],
             },
             {
                 test: /\.htm$/,
                 use: [
                     {
-                        loader: 'html-loader?interpolate'
-                    }
-                ]
+                        loader: "html-loader?interpolate",
+                    },
+                ],
             },
         ],
     },
