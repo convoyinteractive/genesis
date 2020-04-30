@@ -1,18 +1,18 @@
-# 🥾 boot
+# Genesis
 
-> boot presets the configuration needed to rapidly build static websites backed by webpack.
+> Genesis presets the configuration needed to rapidly build static websites backed by webpack.
 
 
 ## Installation
 
-While boot is designed as a template. You can __[start a new project](https://github.com/convoyinteractive/boot/generate)__ directly from GitHub.
+While genesis is designed as a template. You can __[start a new project](https://github.com/convoyinteractive/genesis/generate)__ directly from GitHub.
 
 Now you can install the required dependencies, such as *webpack*, *babel* and *sass* by running `npm install`.
 
 
 ## Getting started
 
-boot ships with presets for bundling JavaScript, precompiling SASS and PostCss plugins like autoprefixer. You may want to update the configurations in the *webpack.config.js* file or require other third party dependencies.
+Genesis ships with presets for bundling JavaScript, precompiling SASS and PostCss plugins like autoprefixer. You may want to update the configurations in the *webpack.config.js* file or require other third party dependencies.
 
 Begin by running
 
@@ -28,7 +28,7 @@ We natively support pretty URLs. So a *news.html* file within your views directo
 
 To create nested pages simply divide your segments by a ":".
 
->Eg. `news:convoy-interactive-presents-boot.html` → `/news/convoy-interactive-presents-boot`
+>Eg. `news:convoy-interactive-presents-genesis.html` → `/news/convoy-interactive-presents-genesis`
 
 ### Components
 
